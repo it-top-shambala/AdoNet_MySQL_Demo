@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNet_MySQL_Demo.App", "Ad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNet_MySQL_Demo.Lib", "AdoNet_MySQL_Demo.Lib\AdoNet_MySQL_Demo.Lib.csproj", "{C131BA9F-F538-4A46-B169-4E21D13EE810}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNet_MySQL_Demo.Lib.Test", "AdoNet_MySQL_Demo.Lib.Test\AdoNet_MySQL_Demo.Lib.Test.csproj", "{08CF74A7-F34C-4B55-896D-179C565EF078}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{C131BA9F-F538-4A46-B169-4E21D13EE810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C131BA9F-F538-4A46-B169-4E21D13EE810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C131BA9F-F538-4A46-B169-4E21D13EE810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08CF74A7-F34C-4B55-896D-179C565EF078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08CF74A7-F34C-4B55-896D-179C565EF078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08CF74A7-F34C-4B55-896D-179C565EF078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08CF74A7-F34C-4B55-896D-179C565EF078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
