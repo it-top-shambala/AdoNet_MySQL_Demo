@@ -7,11 +7,13 @@ namespace AdoNet_MySQL_Demo.Lib.DB;
 public class UsersDb
 {
     private readonly MySqlConnection _db;
+    private readonly MySqlCommand _command;
 
     public UsersDb()
     {
-        Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
+        DefaultTypeMap.MatchNamesWithUnderscores = true;
         _db = new MySqlConnection(DbConfig.Import("db.json").ToString());
+        _command = new MySqlCommand { Connection = _db };
     }
 
     public IEnumerable<User> GetAllUsers()
@@ -30,5 +32,14 @@ public class UsersDb
         var user = _db.QueryFirst<User>(sql);
         _db.Close();
         return user;
+    }
+
+    public void InsertUser(User user)
+    {
+        _db.Open();
+        _command.CommandText =
+            $"INSERT INTO table_users(first_name, last_name) VALUES ('{user.FirstName}', '{user.LastName}')";
+        _command.ExecuteNonQuery();
+        _db.Close();
     }
 }

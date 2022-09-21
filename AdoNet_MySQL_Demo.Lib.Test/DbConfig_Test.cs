@@ -11,10 +11,7 @@ public class DbConfigTest
     {
         _expectedConfig = new DbConfig
         {
-            Server = "localhost",
-            DataBase = "database",
-            User = "user",
-            Password = "password"
+            Server = "localhost", DataBase = "database", User = "user", Password = "password"
         };
     }
 
