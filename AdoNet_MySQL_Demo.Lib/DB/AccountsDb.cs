@@ -83,7 +83,7 @@ public class AccountsDb
     public void DeleteAccount(Account account)
     {
         _db.Open();
-        _command.CommandText = $"UPDATE table_accounts SET is_delete = {account.IsDelete} WHERE account_id = {account.Id}";
+        _command.CommandText = $"UPDATE table_accounts SET is_delete = 1 WHERE account_id = {account.Id}";
         _command.ExecuteNonQuery();
         _db.Close();
     }

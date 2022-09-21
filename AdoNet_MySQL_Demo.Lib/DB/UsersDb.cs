@@ -10,6 +10,7 @@ public class UsersDb
 
     public UsersDb()
     {
+        Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
         _db = new MySqlConnection(DbConfig.Import("db.json").ToString());
     }
 
